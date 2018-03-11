@@ -1,0 +1,24 @@
+{%  extends "layout.html" %}
+{% block body %}
+<head>
+     <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/styles.css') }}">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type=text/javascript></script>
+</head>
+<body class=body>
+{#    <div class='container'>#}
+
+        <div class='webform'>
+            <form action='/users' method='post'>
+                Name:
+                <input type='text' name='name'> Email:
+                <input type='text' name='email'>
+                <input type='submit' value='create user'>
+            </form>
+            <br/>
+            <a href="/show">user page</a>
+
+        </div>
+{#    </div>    #}
+</body>
+{% endblock %}
